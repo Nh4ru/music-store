@@ -1,0 +1,22 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+  Accueil |
+  {{ parent() }}
+{% endblock %}
+
+{% block body %}
+  {% if maVariable is defined and maVariable is not null %}
+    <div class="row">
+      <div class="content">
+        <p>{{ maVariable }}</p>
+      </div>
+    </div>
+  {% else %}
+    <div class="row">
+      <div class="content">
+        <p>La variable n'existe pas !</p>
+      </div>
+    </div>
+  {% endif %}
+{% endblock %}
