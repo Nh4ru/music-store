@@ -38,6 +38,7 @@
     "dependencies": {
         "@commitlint/cli": "^17.1.2",
         "@commitlint/config-conventional": "^17.1.0",
+        "bootstrap-icons": "^1.9.1",
         "yarn": "^1.22.19"
     }
 }
