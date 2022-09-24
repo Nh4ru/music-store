@@ -1,0 +1,21 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+  Admin |
+  {{ parent() }}
+{% endblock %}
+
+{% block body %}
+  <div class="container-fluid mt-4">
+    {# <h1 class="text-center">Bienvenue sur l'admin de l'app Symfony</h1> #}
+    <div class="row mt-4">
+      <div class="col-md-12">
+        <h2 class="text-center">Liste des Articles</h2>
+        {# <a href="{{ path('admin.article.create') }}" class="btn btn-inline btn-primary mt-4 mb-2 text-light">Créer un article</a> #}
+        <div class="row">
+          {# {% include 'Components/_articles.html.twig' with { admin: true } %} #}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

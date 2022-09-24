@@ -2,8 +2,10 @@
 
 namespace App\Entity;
 
-use App\Repository\ArticleRepository;
+use Gedmo\Timestampable;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\ArticleRepository;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 #[ORM\Entity(repositoryClass: ArticleRepository::class)]
 class Article
@@ -28,7 +30,8 @@ class Article
     #[ORM\Column(length: 6)]
     private ?string $format = null;
 
-    #[ORM\Column]
+    #[ORM\Column(type: 'datetime_immutable')]
+    #[Gedmo\Timestampable(on: 'create')]
     private ?\DateTimeImmutable $createdAt = null;
 
     public function getId(): ?int
